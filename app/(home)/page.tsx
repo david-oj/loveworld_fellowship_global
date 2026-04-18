@@ -1,0 +1,11 @@
+import Hero from "@/components/home/Hero";
+import Header from "@/components/layout/Header";
+
+export default function HomePage() {
+  return (
+    <div className="relative">
+      <Header />
+      <Hero />
+    </div>
+  );
+}
