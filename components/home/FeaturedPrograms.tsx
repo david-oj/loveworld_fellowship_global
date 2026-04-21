@@ -83,9 +83,15 @@ const FeaturedPrograms = () => {
   const prevCard = () => swiperRef.current?.slidePrev();
 
   return (
-    <section className="padding-x py-12 md:py-[64px] lg:py-[84px]">
+    <section className="padding-x padding-y">
       <div>
-        <h2 className="sub-heading">Featured Programs</h2>
+        <div className="flex justify-between items-end">
+          <h2 className="sub-heading">Featured Programs</h2>
+
+          <Button variant="link" className="p-0 h-fit">
+            Watch
+          </Button>
+        </div>
         {/* Horizontal bar */}
         <div className="mt-2 h-px w-full bg-black" />
 
@@ -153,10 +159,10 @@ const FeaturedPrograms = () => {
               >
                 <DialogContent
                   showCloseButton={false}
-                  className="max-h-[90vh] w-[600px] max-w-full!  p-0 overflow-auto hide-scrollbar"
+                  className="max-h-[85vh] w-[600px] max-w-[95vw]! md:max-w-full! p-0 max-md:gap-2 overflow-auto hide-scrollbar"
                 >
                   <div className="">
-                    <div className="relative h-[260px]">
+                    <div className="relative h-[200px] sm:h-[260px]">
                       <Image
                         src={card.image}
                         alt={card.title}
@@ -172,12 +178,12 @@ const FeaturedPrograms = () => {
                       {/* <p className="text-xxs font-medium mt-1 bg-primary/70 hover:bg-primary duration-300 hover:cursor-pointer text-white w-fit self-end px-2 py-1 rounded-full">
                       {card.purpose}
                     </p> */}
-                      <DialogTitle className="text-xl font-bold mt-2 text-center">
+                      <DialogTitle className="text-xl font-bold mt-4 md:mt-2 text-center">
                         {card.title}
                       </DialogTitle>
                     </DialogHeader>
 
-                    <div className="space-y-3 mt-4">
+                    <div className="space-y-3 mt-1 md:mt-4">
                       {card.description.map((desc, idx) => (
                         <p className="text-sm" key={idx}>
                           {desc}
@@ -191,7 +197,6 @@ const FeaturedPrograms = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              
             </SwiperSlide>
           ))}
         </Swiper>

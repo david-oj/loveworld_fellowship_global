@@ -148,11 +148,15 @@
     scrollbar-width: none;
   }
 
+  .padding-y {
+    @apply py-12 md:py-16 lg:py-21
+  }
+
   .padding-x {
     @apply px-4 md:px-16
   }
 
   .sub-heading {
-    @apply text-2xl md:text-3xl font-semibold md:leading-12 max-md:text-center
+    @apply text-2xl md:text-3xl font-semibold md:leading-10
   }
 }
