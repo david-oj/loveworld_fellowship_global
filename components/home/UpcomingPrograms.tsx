@@ -76,7 +76,7 @@ const UpcomingPrograms = () => {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section className="padding-x padding-y">
+    <section className="padding-x padding-y bg-secondary/5">
       <div>
         <div className="flex justify-between items-end">
           <h2 className="sub-heading">Upcoming Programs</h2>
@@ -86,7 +86,7 @@ const UpcomingPrograms = () => {
           </Button>
         </div>
         {/* Horizontal bar */}
-        <div className="mt-2 h-px w-full bg-black" />
+        <div className="mt-1 md:mt-2 h-px w-full bg-black" />
 
         <Swiper
           modules={[Navigation, Autoplay]}

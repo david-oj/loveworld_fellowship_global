@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const GlobalReach = () => {
   return (
-    <section className="pt-12 md:pt-[104px] overflow-hidden">
+    <section className="pt-12 md:pt-[104px] overflow-hidden ">
       <div className="">
         <div className="padding-x flex flex-col items-center justify-center">
           <div className="rounded-full py-1.5 px-3 bg-secondary/15">

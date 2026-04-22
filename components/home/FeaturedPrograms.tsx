@@ -93,7 +93,7 @@ const FeaturedPrograms = () => {
           </Button>
         </div>
         {/* Horizontal bar */}
-        <div className="mt-2 h-px w-full bg-black" />
+        <div className="mt-1 md:mt-2 h-px w-full bg-black" />
 
         <Swiper
           onBeforeInit={(swiper) => (swiperRef.current = swiper)}
