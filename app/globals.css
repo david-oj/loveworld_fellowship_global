@@ -50,6 +50,8 @@
 }
 
 :root {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -166,4 +168,23 @@
   .semi-circle {
     clip-path: ellipse(50% 100% at 50% 100%);
   }
+
+
+  .menu {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+
 }

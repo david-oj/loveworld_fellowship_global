@@ -76,7 +76,7 @@ const UpcomingPrograms = () => {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section className="padding-x padding-y bg-secondary/5">
+    <section id="upcoming" className="padding-x padding-y bg-secondary/5">
       <div>
         <div className="flex justify-between items-end">
           <h2 className="sub-heading">Upcoming Programs</h2>

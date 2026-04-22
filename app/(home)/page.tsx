@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import JoinTheFellowship from "@/components/home/JoinTheFellowship";
 import Sponsorship from "@/components/home/Sponsorship";
 import UpcomingPrograms from "@/components/home/UpcomingPrograms";
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Sponsorship />
       <UpcomingPrograms />
       <GlobalReach />
+      <Footer />
     </div>
   );
 }
