@@ -7,7 +7,7 @@ const Sponsorship = () => {
   return (
     <section className="pl-4 md:pl-16 lg:pl-20 padding-">
       <div className="flex flex-row-reverse gap-3 md:gap-8 lg:gap-14 justify-end items-center">
-        <div className="relative flex-1 h-[482px] md:h-[528px] lg:h-[608px] bg-amber-100 max-w-[600px]">
+        <div className="relative flex-1 h-[482px] md:h-[528px] lg:h-[608px] max-w-[600px]">
           <Image
             src={upwardConference}
             alt="sponsorship section image"
@@ -16,7 +16,7 @@ const Sponsorship = () => {
           />
         </div>
 
-        <div className="flex-1 bg-amber-">
+        <div className="flex-1">
           <h2 className="sub-heading max-md:text- max-md:mt-2">
             Partner With The <br className="max-lg:hidden" /> Vision
           </h2>

@@ -24,7 +24,7 @@ const JoinTheFellowship = () => {
           </div>
         </div>
 
-        <div className="relative md:flex-1 bg-amber-100 h-[28vw] max-h-[299px] min-h-[200px] w-full max-w-[495px] rounded-xl overflow-hidden">
+        <div className="relative md:flex-1 h-[28vw] max-h-[299px] min-h-[200px] w-full max-w-[495px] rounded-xl overflow-hidden">
           <Image
             src={lgfOrdination}
             alt="A gosple christian crusade "
