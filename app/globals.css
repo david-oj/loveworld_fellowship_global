@@ -33,6 +33,7 @@
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
@@ -58,6 +59,7 @@
   --primary: oklch(76.652% 0.13861 91.065);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(41.821% 0.14671 31.178);
+  --secondary-light: oklch(94.918% 0.02071 17.238);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -93,6 +95,7 @@
   --primary: oklch(76.652% 0.13861 91.065);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(41.821% 0.14671 31.178);
+  --secondary-light: oklch(94.918% 0.02071 17.238);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
@@ -158,5 +161,9 @@
 
   .sub-heading {
     @apply text-2xl md:text-3xl font-semibold md:leading-10
+  }
+
+  .semi-circle {
+    clip-path: ellipse(50% 100% at 50% 100%);
   }
 }

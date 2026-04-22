@@ -4,6 +4,7 @@ import adcon26 from "./ADCON26.jpg";
 import lgfOrdination from "./lgf-ordination.jpg";
 import upwardConference from "./upward-conference.jpg";
 import crusade from "./crusade-img.jpg";
+import worldMap from "./world-map.webp";
 
 export {
   lfgBackground,
@@ -12,4 +13,5 @@ export {
   lgfOrdination,
   upwardConference,
   crusade,
+  worldMap,
 };

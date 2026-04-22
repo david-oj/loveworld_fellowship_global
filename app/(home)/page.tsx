@@ -1,6 +1,8 @@
 import FeaturedPrograms from "@/components/home/FeaturedPrograms";
+import GlobalReach from "@/components/home/GlobalReach";
 import Hero from "@/components/home/Hero";
 import JoinTheFellowship from "@/components/home/JoinTheFellowship";
+import UpcomingPrograms from "@/components/home/UpcomingPrograms";
 import Header from "@/components/layout/Header";
 
 export default function HomePage() {
@@ -9,7 +11,9 @@ export default function HomePage() {
       <Header />
       <Hero />
       <FeaturedPrograms />
-      <JoinTheFellowship/>
+      <JoinTheFellowship />
+      <GlobalReach />
+      <UpcomingPrograms />
     </div>
   );
 }
