@@ -1,20 +1,62 @@
+"use client";
+
 import { lfgBackground } from "@/assets/images";
 import Image from "next/image";
-import React from "react";
 import { Button } from "../ui/button";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.playbackRate = 0.3;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "100px",
+      }
+    );
+
+    observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="padding-x relative h-[calc(100vh-100px)]">
       <div className="h-full w-full absolute inset-0 ">
         <Image
           src={lfgBackground}
           alt="hero background image"
-          className="size-full object-cover -z-1"
+          className="size-full object-cover -z-1  "
           fill
+          // sizes="100vw"
         />
+
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover -z-1 opacity pointer-events-none mix-blend-screen"
+        >
+          <source src="/fire_burning_hot_sparks.mp4" type="video/mp4" />
+        </video>
+
         {/* Dark overlay */}
-        <div className="h-full w-full z-30 bg-linear-to-b to-90% to-black/50 " />
+        <div className="h-full w-full z-30 bg-linear-to-b to-90% to-black/40 " />
       </div>
 
       <div className="pt-25 relative h-full flex flex-col justify-center md:justify-end max-md:items-center pb-[64px] lg:pb-20 ">

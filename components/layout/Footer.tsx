@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { facebook, instagram, tiktok, youtube } from "@/assets/icons";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { lfgBackground } from "@/assets/images";
+import { useEffect, useRef } from "react";
 
 export const footerItems = [
   {
@@ -49,9 +53,101 @@ export const socialIcons = [
 ];
 
 const Footer = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.playbackRate = 0.3;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "100px",
+      }
+    );
+
+    observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
+
+  // useEffect(() => {
+  //   const video = videoRef.current;
+  //   if (!video) return;
+
+  //   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  //   video.playbackRate = 0.5;
+
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (mediaQuery.matches) {
+  //         video.pause();
+  //         return;
+  //       }
+
+  //       if (entry.isIntersecting) {
+  //         video.play().catch(() => {});
+  //       } else {
+  //         video.pause();
+  //       }
+  //     },
+  //     {
+  //       threshold: 0.3,
+  //       rootMargin: "100px",
+  //     }
+  //   );
+
+  //   const handleChange = () => {
+  //     if (mediaQuery.matches) {
+  //       video.pause();
+  //     }
+  //   };
+
+  //   observer.observe(video);
+  //   mediaQuery.addEventListener("change", handleChange);
+
+  //   return () => {
+  //     observer.disconnect();
+  //     mediaQuery.removeEventListener("change", handleChange);
+  //   };
+  // }, []);
+
   return (
-    <footer className="relative bg-secondary pb-2 @container">
-      <div className="flex flex-wrap sm:px-14 py-6 px-6 gap-4 justify-between">
+    <footer className="relative pb-2 @container">
+      <div className="h-full w-full absolute inset-0 ">
+        <Image
+          src={lfgBackground}
+          alt="hero background image"
+          className="size- object-cover -z-1 "
+          fill
+        />
+
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover -z-1 opacity pointer-events-none mix-blend-screen"
+        >
+          <source src="/fire_burning_hot_sparks.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay */}
+        <div className="h-full w-full z-30 bg-linear-to-b to-90% to-black/40 " />
+      </div>
+
+      <div className="flex flex-wrap sm:px-14 py-6 px-6 gap-4 justify-between relative">
         {footerItems.map((item, idx) => {
           return (
             <div className="flex-1 flex gap-2 min-w-[191px]" key={idx}>
@@ -95,11 +191,12 @@ const Footer = () => {
           ))}
         </div>
       </div>
+
       <div className="relative flex justify-center sm:mt-11 mt-8">
         <div className="w-full h-[1px] top-1/2 bottom-0 bg-white absolute max-sm:-top-3 " />
-        <p className="text-white z-10 sm:bg-secondary sm:px-8 px-2 max-sm:text-center flex max-sm:flex-col items-center ">
-          &copy; {new Date().getFullYear()} Loveworld Fellowship
-          Global. <br className="sm:hidden" /> All Rights Reserved.
+        <p className="text-white z-10 sm:bg-black/60 sm:backdrop-blur-xs sm:px-2 px-2 max-sm:text-center flex max-sm:flex-col items-center ">
+          &copy; {new Date().getFullYear()} Loveworld Fellowship Global.{" "}
+          <br className="sm:hidden" /> All Rights Reserved.
         </p>
       </div>
     </footer>

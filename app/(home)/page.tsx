@@ -4,20 +4,18 @@ import Hero from "@/components/home/Hero";
 import JoinTheFellowship from "@/components/home/JoinTheFellowship";
 import Sponsorship from "@/components/home/Sponsorship";
 import UpcomingPrograms from "@/components/home/UpcomingPrograms";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 
 export default function HomePage() {
   return (
-    <div className="relative">
-      <Header />
-      <Hero />
-      <FeaturedPrograms />
-      <JoinTheFellowship />
-      <Sponsorship />
-      <UpcomingPrograms />
-      <GlobalReach />
-      <Footer />
-    </div>
+    <>
+      <div className="relative">
+        <Hero />
+        <FeaturedPrograms />
+        <JoinTheFellowship />
+        <Sponsorship />
+        <UpcomingPrograms />
+        <GlobalReach />
+      </div>
+    </>
   );
 }
