@@ -1,6 +1,5 @@
-import { lgfOrdination, upwardConference } from "@/assets/images";
+import { lgfOrdination } from "@/assets/images";
 import Image from "next/image";
-import React from "react";
 import { Button } from "../ui/button";
 
 const JoinTheFellowship = () => {
@@ -12,7 +11,7 @@ const JoinTheFellowship = () => {
             Join The Fellowship
           </p>
           <h2 className="sub-heading max-md:text-center max-md:mt-2">
-            Join The Loveworld Fellowship Global
+            Join The Loveworld Global Fellowship
           </h2>
           <p className="mt-2 md:mt-4 text-sm font-light max-md:text-center max-w-[430px] md:max-w-[440px]">
             Connect with believers across nations, participate in{" "}

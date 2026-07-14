@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Loveworld Fellowship Global",
+  title: "Loveworld Global Fellowship",
   description:
     "Where the impact & glory of God is made evident and lives are changed",
 };

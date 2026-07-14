@@ -81,9 +81,9 @@ const UpcomingPrograms = () => {
         <div className="flex justify-between items-end">
           <h2 className="sub-heading">Upcoming Programs</h2>
 
-          <Button variant="link" className="p-0 h-fit">
+          {/* <Button variant="link" className="p-0 h-fit">
             Participate
-          </Button>
+          </Button> */}
         </div>
         {/* Horizontal bar */}
         <div className="mt-1 md:mt-2 h-px w-full bg-black" />

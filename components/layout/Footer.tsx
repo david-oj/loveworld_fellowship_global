@@ -72,7 +72,7 @@ const Footer = () => {
       {
         threshold: 0.3,
         rootMargin: "100px",
-      }
+      },
     );
 
     observer.observe(video);
@@ -195,7 +195,7 @@ const Footer = () => {
       <div className="relative flex justify-center sm:mt-11 mt-8">
         <div className="w-full h-[1px] top-1/2 bottom-0 bg-white absolute max-sm:-top-3 " />
         <p className="text-white z-10 sm:bg-black/60 sm:backdrop-blur-xs sm:px-2 px-2 max-sm:text-center flex max-sm:flex-col items-center ">
-          &copy; {new Date().getFullYear()} Loveworld Fellowship Global.{" "}
+          &copy; {new Date().getFullYear()} Loveworld Global Fellowship.{" "}
           <br className="sm:hidden" /> All Rights Reserved.
         </p>
       </div>

@@ -25,7 +25,7 @@ const Hero = () => {
       {
         threshold: 0.3,
         rootMargin: "100px",
-      }
+      },
     );
 
     observer.observe(video);
@@ -34,7 +34,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="padding-x relative h-[calc(100vh-100px)]">
+    <section className="padding-x relative h-[calc(100vh)]">
       <div className="h-full w-full absolute inset-0 ">
         <Image
           src={lfgBackground}
@@ -61,7 +61,7 @@ const Hero = () => {
 
       <div className="pt-25 relative h-full flex flex-col justify-center md:justify-end max-md:items-center pb-[64px] lg:pb-20 ">
         <h1 className="font-semibold text-[32px] max-md:leading-[38px] md:text-4xl max-sm:font-bold text-white max-md:text-center">
-          Loveworld Fellowship <br className="" /> Global
+          Loveworld Global <br className="" /> Fellowship
         </h1>
         <p className="text-white mt-2 md:mt-4 max-md:text-center max-w-[340px] md:max-w-[360px] text-sm">
           Spreading the gosple to the ends of the earth, it is a race for the
